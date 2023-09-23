@@ -3,11 +3,11 @@ import org.junit.jupiter.api.Test;
 
 public class RadioTest {
     @Test
-    public void SwitchingVolumeToOnePlus(){//Переключение громкости на одну единицу выше
+    public void switchingVolumeToOnePlus(){//Переключение громкости на одну единицу выше
         Radio Radio = new Radio();
         Radio.setCurrentVolume(100);
 
-        Radio.SwitchingVolumePlus();
+        Radio.switchingVolumePlus();
 
         int expected = 100;
         int actual = Radio.getCurrentVolume();
@@ -15,11 +15,11 @@ public class RadioTest {
     }
 
     @Test
-    public void SwitchingVolumeToOneMinus(){//Переключение громкости на одну единицу ниже
+    public void switchingVolumeToOneMinus(){//Переключение громкости на одну единицу ниже
         Radio Radio = new Radio();
         Radio.setCurrentVolume(0);
 
-        Radio.SwitchingVolumeMinus();
+        Radio.switchingVolumeMinus();
 
         int expected = 0;
         int actual = Radio.getCurrentVolume();
@@ -40,7 +40,7 @@ public class RadioTest {
     public void shouldSetToMaxVolume(){//Максимальная громкость.
         Radio Radio = new Radio();
 
-        Radio.SetToMaxVolume();//Тестируемое действие:Установка максимальной громкости.
+        Radio.setToMaxVolume();//Тестируемое действие:Установка максимальной громкости.
 
         int expected = 100;
         int actual = Radio.getCurrentVolume();
@@ -71,11 +71,11 @@ public class RadioTest {
     //------------------------------working with radio stations------------------------------------------
 
     @Test
-    public void SwitchingRadioStationsToOnePlus(){//Переключение радиостанций на одну единицу выше
+    public void switchingRadioStationsToOnePlus(){//Переключение радиостанций на одну единицу выше
         Radio Radio = new Radio();
         Radio.setCurrentRadioStation(8);
 
-        Radio.SwitchingRadioStationsPlus();
+        Radio.switchingRadioStationsPlus();
 
         int expected = 9;
         int actual = Radio.getCurrentRadioStation();
@@ -83,11 +83,11 @@ public class RadioTest {
     }
 
     @Test
-    public void SwitchingRadioStationsToOneMinus(){//Переключение радиостанций на одну единицу ниже
+    public void switchingRadioStationsToOneMinus(){//Переключение радиостанций на одну единицу ниже
         Radio Radio = new Radio();
         Radio.setCurrentRadioStation(0);
 
-        Radio.SwitchingRadioStationsMinus();
+        Radio.switchingRadioStationsMinus();
 
         int expected = 9;
         int actual = Radio.getCurrentRadioStation();
@@ -108,7 +108,7 @@ public class RadioTest {
     public void shouldSetToMaxRadioStation(){//Максимальная радиостанция.
         Radio Radio = new Radio();
 
-        Radio.SetToMaxRadioStation();//Тестируемое действие:Установка максимальной радиостанции.
+        Radio.setToMaxRadioStation();//Тестируемое действие:Установка максимальной радиостанции.
 
         int expected = 9;
         int actual = Radio.getCurrentRadioStation();
