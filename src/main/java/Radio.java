@@ -1,35 +1,35 @@
 public class Radio {
 
-    private int currentVolume;//Текущая громкость.
+    private int getCurrentVolume;//Текущая громкость.
 
-    private int currentRadioStation;//Текущая радиостанция.
+    private int getCurrentRadioStation;//Текущая радиостанция.
 
 
     public int getCurrentVolume() {//Запрос данных.
-        return currentVolume;
+        return getCurrentVolume;
     }
 
     public int getCurrentRadioStation() {//Запрос данных.
-        return currentRadioStation;
+        return getCurrentRadioStation;
     }
 
-    public void switchingVolumePlus() {//Переключение громкости на одну единицу выше.
-        int target = currentVolume + 1;
+    public void getSwitchingVolumePlus() {//Переключение громкости на одну единицу выше.
+        int target = getCurrentVolume + 1;
         setCurrentVolume(target);//Применение метода сравнения с установленными ограничителями.
     }
 
-    public void switchingVolumeMinus() {//Переключение громкости на одну единицу ниже.
-        int target = currentVolume - 1;
+    public void getSwitchingVolumeMinus() {//Переключение громкости на одну единицу ниже.
+        int target = getCurrentVolume - 1;
         setCurrentVolume(target);//Применение метода сравнения с установленными ограничителями.
     }
 
-    public void switchingRadioStationsPlus() {//Переключение радиостанций на одну единицу выше.
-        int target = currentRadioStation + 1;
+    public void getSwitchingRadioStationsPlus() {//Переключение радиостанций на одну единицу выше.
+        int target = getCurrentRadioStation + 1;
         setCurrentRadioStation(target);//Применение метода сравнения с установленными ограничителями.
     }
 
-    public void switchingRadioStationsMinus() {//Переключение радиостанций на одну единицу ниже.
-        int target = currentRadioStation - 1;
+    public void getSwitchingRadioStationsMinus() {//Переключение радиостанций на одну единицу ниже.
+        int target = getCurrentRadioStation - 1;
         setCurrentRadioStation(target);//Применение метода сравнения с установленными ограничителями.
     }
 
@@ -40,7 +40,7 @@ public class Radio {
         if (newCurrentVolume > 100) {//Проверка, что громкость не больше установленной, если больше, то установка будет невозможной.
             return;
         }
-        currentVolume = newCurrentVolume;
+        getCurrentVolume = newCurrentVolume;
     }
 
     public void setCurrentRadioStation(int newCurrentRadioStation) {//Изменение данных.
@@ -50,15 +50,15 @@ public class Radio {
         if (newCurrentRadioStation > 9) {//Проверка, что радиостанция не больше установленной, если больше, то установка будет невозможной.
             newCurrentRadioStation = 0;
         }
-        currentRadioStation = newCurrentRadioStation;
+        getCurrentRadioStation = newCurrentRadioStation;
     }
 
     public void setToMaxRadioStation() {//Максимальный номер радиостанции.
-        currentRadioStation = 9;
+        getCurrentRadioStation = 9;
     }
 
     public void setToMaxVolume() {//Максимальная громкость.
-        currentVolume = 100;
+        getCurrentVolume = 100;
     }
 
 }

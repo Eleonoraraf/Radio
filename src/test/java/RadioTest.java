@@ -7,7 +7,7 @@ public class RadioTest {
         Radio Radio = new Radio();
         Radio.setCurrentVolume(100);
 
-        Radio.switchingVolumePlus();
+        Radio.getSwitchingVolumePlus();
 
         int expected = 100;
         int actual = Radio.getCurrentVolume();
@@ -19,7 +19,7 @@ public class RadioTest {
         Radio Radio = new Radio();
         Radio.setCurrentVolume(0);
 
-        Radio.switchingVolumeMinus();
+        Radio.getSwitchingVolumeMinus();
 
         int expected = 0;
         int actual = Radio.getCurrentVolume();
@@ -75,7 +75,7 @@ public class RadioTest {
         Radio Radio = new Radio();
         Radio.setCurrentRadioStation(8);
 
-        Radio.switchingRadioStationsPlus();
+        Radio.getSwitchingRadioStationsPlus();
 
         int expected = 9;
         int actual = Radio.getCurrentRadioStation();
@@ -87,7 +87,7 @@ public class RadioTest {
         Radio Radio = new Radio();
         Radio.setCurrentRadioStation(0);
 
-        Radio.switchingRadioStationsMinus();
+        Radio.getSwitchingRadioStationsMinus();
 
         int expected = 9;
         int actual = Radio.getCurrentRadioStation();
